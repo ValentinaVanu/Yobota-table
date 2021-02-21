@@ -1,17 +1,25 @@
+export const initialValues = {
+  last_name: '',
+  first_name: '',
+  email: '',
+  date_of_birth: '',
+  industry: '',
+  salary: '',
+  years_of_experience: '',
+}
+
 export const columns = [
   {
     id: 'first_name',
     label: 'First Name',
     minWidth: 100,
     align: 'left',
-    // format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'last_name',
     label: 'Last Name',
     minWidth: 100,
     align: 'left',
-    // format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'email',
@@ -19,35 +27,31 @@ export const columns = [
     minWidth: 170,
     align: 'left',
     minWidth: 100,
-    // format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'date_of_birth',
     label: 'DOB',
     minWidth: 170,
     align: 'left',
-    // format: (value) => value.toFixed(2),
   },
   {
     id: 'industry',
     label: 'Industry',
     minWidth: 100,
-    align: 'right',
-    // format: (value) => value.toFixed(2),
+    align: 'left',
   },
   {
     id: 'salary',
     label: 'Salary',
     minWidth: 100,
     align: 'right',
-    // format: (value) => value.toFixed(2),
   },
   {
     id: 'years_of_experience',
     label: 'Years of Experience',
     minWidth: 100,
-    align: 'center',
-    // format: (value) => value.toFixed(2),
+    align: 'right',
   },
 ];
+
 

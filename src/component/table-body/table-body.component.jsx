@@ -11,15 +11,15 @@ const YobotaTableBody = ({ tableData, searchValue, nameSelect }) => {
 
   return (
     <TableBody>
-      {tableData && tableData.map((row) => {
+      {tableData && tableData.map((row, key) => {
         return (
           <>
-            {matchCondition(row, searchValue) && (<TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
-              {columns.map((column) => {
+            {matchCondition(row, searchValue) && (<TableRow hover role="checkbox" tabIndex={-1} key={key}>
+              {columns.map((column, key) => {
                 const value = row[column.id]
                 return (
                   <>
-                    {nameSelect !== column.id && <TableCell key={column.id} align={column.align}>
+                    {nameSelect !== column.id && <TableCell key={key} align={column.align}>
                       {value}
                     </TableCell>}
                   </>

@@ -1,7 +1,14 @@
 export const columns = [
   {
     id: 'first_name',
-    label: 'Name',
+    label: 'First Name',
+    minWidth: 100,
+    align: 'left',
+    // format: (value) => value.toLocaleString('en-US'),
+  },
+  {
+    id: 'last_name',
+    label: 'Last Name',
     minWidth: 100,
     align: 'left',
     // format: (value) => value.toLocaleString('en-US'),

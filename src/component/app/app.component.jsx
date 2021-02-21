@@ -1,12 +1,18 @@
 import React from 'react'
-import { YobotaTable } from './table/table.component'
+import { Provider } from 'react-redux'
+import store from '../../store'
+import { YobotaChart } from '../chart'
+import { YobotaTableHeader } from '../table-header'
+import { StyledAppWrapper } from './app.style'
 
 const App = () => {
   return (
-    <div>
-      <div>Hello Yobota!</div>
-      <YobotaTable />
-    </div>
+    <StyledAppWrapper>
+      <Provider store={store}>
+        <YobotaTableHeader />
+        <YobotaChart />
+      </Provider>
+    </StyledAppWrapper>
   )
 }
 

@@ -18,7 +18,6 @@ export const getYobotaDataAction = () => {
       const getResult = async() => {
         const { data } = await get('http://localhost:1234/data')
         dispatch(setYobotaDataAction(data))
-        // console.log(data)
       }
       getResult()
     } catch (error) {

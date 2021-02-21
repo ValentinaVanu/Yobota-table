@@ -1,9 +1,18 @@
 import styled from 'styled-components'
-import { InputBase, makeStyles, TableCell, TablePagination, TableRow, withStyles } from '@material-ui/core'
+import {
+  InputBase,
+  makeStyles,
+  NativeSelect,
+  TableCell,
+  TablePagination,
+  TableRow,
+  withStyles
+} from '@material-ui/core'
 import PieChartIcon from '@material-ui/icons/PieChart'
 
 
 // DropDown Styles
+
 export const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
@@ -13,16 +22,9 @@ export const useStyles = makeStyles((theme) => ({
   },
   container: {
     maxHeight: 440,
+    background: '#9fa7b7'
   },
 }))
-  // const useStyles = makeStyles({
-  //   root: {
-  //     width: '100%',
-  //   },
-  //   container: {
-  //     maxHeight: 440,
-  //   },
-  // });
 
 export const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -91,7 +93,7 @@ export const StyledTableCell = styled(TableCell)`
   }
 `
 
-export const StyledTableWrapper = styled.div`
+export const StyledTableWrapper = styled.div `
   grid-column: 1/-1;
   grid-row: 1/2;
 `

@@ -5,34 +5,29 @@ import { columns } from '../table-header/table.config';
 import { TableRow } from '@material-ui/core';
 
 // Rows are filtered by input value from table head component
-// const matchCondition = (row, searchValue) => searchValue.value ? row[searchValue.name] === searchValue.value : true
 // Props from Parent Component table head includes main data, searchValue which come with both the value inserted in the input field and the name of the column it was inserted for, also Our DropDown state, if it's eather on first name or last name.
 
 const YobotaTableBody = ({ tableData, searchValue, nameSelect }) => {
   const filterData = Object.keys(searchValue || {}).length ? tableData.filter(row => Object.keys(searchValue).map(prop => {
     return searchValue[prop] == row[prop]
   }).some(e => e)) : tableData
-
+  const [f, s, ...r] = columns
+  const newColumns = [(nameSelect === "first_name" ? f : s), ...r]
+  console.log(f, s, r, newColumns)
   return (
     <TableBody>
       {filterData && filterData.map((row, key) => {
         return (
-          <>
-          {/* if our matchCondition/filter is met, then we will have relevant row displayed, otherwise we will see all the rows */}
-            {/* {matchCondition(row, searchValue) && (<TableRow hover role="checkbox" tabIndex={-1} key={key}> */}
-            {(<TableRow hover role="checkbox" tabIndex={-1} key={key}>
-              {columns.map((column, key) => {
-                const value = row[column.id]
-                return (
-                  <>
-                    {nameSelect !== column.id && <TableCell key={key} align={column.align}>
-                      {value}
-                    </TableCell>}
-                  </>
-                );
-              })}
-            </TableRow>)}
-          </>
+          <TableRow hover role="checkbox" tabIndex={-1} key={key}>
+            {newColumns.map((column, key) => {
+              const value = row[column.id]
+              return (
+                <TableCell key={key} align={column.align}>
+                  {value}
+                </TableCell>
+              );
+            })}
+          </TableRow>
         );
       })}
     </TableBody>

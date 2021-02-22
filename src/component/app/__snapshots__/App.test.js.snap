@@ -203,7 +203,7 @@ exports[`renders main app component 1`] = `
           />
           <p
             className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
-            id="mui-67851"
+            id="mui-84069"
           >
             Rows per page:
           </p>
@@ -213,9 +213,9 @@ exports[`renders main app component 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-67851 mui-81112"
+              aria-labelledby="mui-84069 mui-47934"
               className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
-              id="mui-81112"
+              id="mui-47934"
               onBlur={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}

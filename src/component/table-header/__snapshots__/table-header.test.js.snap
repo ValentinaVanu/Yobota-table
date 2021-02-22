@@ -199,7 +199,7 @@ exports[`renders yobota table body component 1`] = `
         />
         <p
           className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
-          id="mui-43409"
+          id="mui-62261"
         >
           Rows per page:
         </p>
@@ -209,9 +209,9 @@ exports[`renders yobota table body component 1`] = `
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby="mui-43409 mui-70228"
+            aria-labelledby="mui-62261 mui-24049"
             className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
-            id="mui-70228"
+            id="mui-24049"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}

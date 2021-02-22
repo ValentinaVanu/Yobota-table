@@ -20,13 +20,13 @@ import { ClickAwayListener, Grow, MenuItem, MenuList, Popper } from '@material-u
 
 const YobotaTableHeader = () => {
   const [page, setPage] = useState(0)
-  const [searchValue, setSearchValue] = useState({ value: "", name: "" })
+  const [searchValue, setSearchValue] = useState({})
   const [rowsPerPage, setRowsPerPage] = useState(10)
   // DropDown State
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
-  const [nameSelect, setNameSelect] = useState("last_name")
+  const [nameSelect, setNameSelect] = useState("first_name")
   const [mockData, chart] = useSelector(({ yobota }) => [
     yobota.data,
     yobota.chart,
@@ -81,9 +81,10 @@ const YobotaTableHeader = () => {
   // Input Value
   const handleValueChange = (e, setFieldValue) => {
     setFieldValue(e.target.name, e.target.value)
+    console.log(e.target.name, e.target.value)
     setSearchValue({
-      value: e.target.value,
-      name: e.target.name
+      ...searchValue,
+      [e.target.name]: e.target.value,
     })
   }
   const onSubmit = () => {
@@ -186,10 +187,10 @@ const YobotaTableHeader = () => {
                           <br />
                           {/* I've gave the option to search in these fields for each Column displayed */}
                           <Field
+                            autocomplete="off"
                             onKeyDown={(e) => {
                               if (e.key === 'Enter') {
-                                handleSubmit()
-                              }
+                                handleSubmit()}
                             }}
                             onBlur={(e) => {
                               handleBlur(e)
@@ -197,7 +198,6 @@ const YobotaTableHeader = () => {
                             }}
                             onChange={e => {
                               handleValueChange(e, setFieldValue)
-
                             }}
                             id={column.id}
                             name={column.id}

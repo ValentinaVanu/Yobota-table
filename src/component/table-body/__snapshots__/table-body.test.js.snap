@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders yobota table body component 1`] = `
+<tbody
+  className="MuiTableBody-root"
+  role={null}
+/>
+`;

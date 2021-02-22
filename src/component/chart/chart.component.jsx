@@ -13,12 +13,12 @@ import { StyledChartWrapper } from './chart.style'
 
 
 const YobotaChart = () => {
-
+// yobota data and chart boolean state from redux
   const [chartData, chart] = useSelector(({ yobota }) => [
     yobota.data,
     yobota.chart,
   ])
-
+// List of Date of birth year with year and salary
   const dobList = chartData.map(l => ({
     year: l.date_of_birth.split("/")[2],
     salary: l.salary
@@ -26,7 +26,7 @@ const YobotaChart = () => {
 
   return (
     <StyledChartWrapper>
-      {chart && <Paper>
+      {chart === "on" && <Paper>
         <Chart
           data={dobList}
         >

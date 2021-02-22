@@ -2,7 +2,7 @@ import * as constant from './yobota.constant'
 
 export const initialState = {
   data: [],
-  chart: false
+  chart: "off"
 }
 
 export const yobotaReducer = (state = initialState, action) => {

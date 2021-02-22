@@ -38,7 +38,7 @@ export const BootstrapInput = withStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     border: '1px solid #ced4da',
     fontSize: 16,
-    padding: '10px 26px 10px 12px',
+    padding: '2px 26px 2px 12px',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
 
     fontFamily: [
@@ -64,8 +64,11 @@ export const BootstrapInput = withStyles((theme) => ({
 // Table Styles
 export const StyledPieChartIcon = styled(PieChartIcon)`
   && {
-    color: ${({ chart }) => !chart ? '#fff' : 'red'};
-    padding-top: 11px;
+    color: ${({ chart }) => chart === "off" ? '#fff' : 'red'};
+    float: 'left';
+    font-size: 14px;
+    margin-left: 4px;
+    margin-bottom: -1px;
   }
 `
 
@@ -88,7 +91,7 @@ export const StyledTableCell = styled(TableCell)`
     color: #fff;
     background-color: #222934;
     border-bottom: none;
-    padding: 4px 8px 0px 8px;
+    padding: 4px 8px;
     font-size: 16px;
   }
 `

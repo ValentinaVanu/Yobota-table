@@ -81,7 +81,7 @@ const YobotaTableHeader = () => {
   // Input Value
   const handleValueChange = (e, setFieldValue) => {
     setFieldValue(e.target.name, e.target.value)
-    console.log(e.target.name, e.target.value)
+
     setSearchValue({
       ...searchValue,
       [e.target.name]: e.target.value,

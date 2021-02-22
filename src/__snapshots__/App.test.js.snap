@@ -39,11 +39,11 @@ exports[`renders main app component 1`] = `
                 <div
                   onClick={[Function]}
                 >
-                  Last Name
+                  First Name
                 </div>
                 <input
-                  id="last_name"
-                  name="last_name"
+                  id="first_name"
+                  name="first_name"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onKeyDown={[Function]}
@@ -65,6 +65,7 @@ exports[`renders main app component 1`] = `
                 Email
                 <br />
                 <input
+                  autocomplete="off"
                   id="email"
                   name="email"
                   onBlur={[Function]}
@@ -100,6 +101,7 @@ exports[`renders main app component 1`] = `
                 </svg>
                 <br />
                 <input
+                  autocomplete="off"
                   id="date_of_birth"
                   name="date_of_birth"
                   onBlur={[Function]}
@@ -123,6 +125,7 @@ exports[`renders main app component 1`] = `
                 Industry
                 <br />
                 <input
+                  autocomplete="off"
                   id="industry"
                   name="industry"
                   onBlur={[Function]}
@@ -146,6 +149,7 @@ exports[`renders main app component 1`] = `
                 Salary
                 <br />
                 <input
+                  autocomplete="off"
                   id="salary"
                   name="salary"
                   onBlur={[Function]}
@@ -169,6 +173,7 @@ exports[`renders main app component 1`] = `
                 Years of Experience
                 <br />
                 <input
+                  autocomplete="off"
                   id="years_of_experience"
                   name="years_of_experience"
                   onBlur={[Function]}
@@ -198,7 +203,7 @@ exports[`renders main app component 1`] = `
           />
           <p
             className="MuiTypography-root MuiTablePagination-caption MuiTypography-body2 MuiTypography-colorInherit"
-            id="mui-96235"
+            id="mui-67851"
           >
             Rows per page:
           </p>
@@ -208,9 +213,9 @@ exports[`renders main app component 1`] = `
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-96235 mui-75057"
+              aria-labelledby="mui-67851 mui-81112"
               className="MuiSelect-root MuiSelect-select MuiTablePagination-select MuiSelect-selectMenu MuiInputBase-input"
-              id="mui-75057"
+              id="mui-81112"
               onBlur={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}

@@ -13,7 +13,7 @@ const YobotaTableBody = ({ tableData, searchValue, nameSelect }) => {
   }).some(e => e)) : tableData
   const [f, s, ...r] = columns
   const newColumns = [(nameSelect === "first_name" ? f : s), ...r]
-  console.log(f, s, r, newColumns)
+
   return (
     <TableBody>
       {filterData && filterData.map((row, key) => {
